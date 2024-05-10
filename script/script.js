@@ -80,6 +80,9 @@ request("GET", URL_REGION_CARS).then((data) => {
 
   var arrAllSelectedMarks = new Array();
   const addNewSelect = (event) => {
+    let selectBox = document.getElementsByClassName("selectBox_Models");
+    selectBox[0].classList.remove("avoid-click");
+
     let labelModel = event.target.parentElement;
     labelModel.classList.toggle("activate");
 
@@ -143,6 +146,12 @@ request("GET", URL_REGION_CARS).then((data) => {
                 allSelected.append(arrAllSelectedMarks.join(", "));
                 if (arrAllSelectedMarks.length === 0) {
                   allSelected.innerText = "Выберите марку...";
+
+                  let selectBox =
+                    document.getElementsByClassName("selectBox_Models");
+                  let checkboxModels = document.querySelector("#checkboxes_2");
+                  selectBox[0].classList.add("avoid-click");
+                  checkboxModels.style.display = "none";
                 }
               }
             }
@@ -164,7 +173,6 @@ request("GET", URL_REGION_CARS).then((data) => {
     inputElement.setAttribute("id", ID);
     inputElement.setAttribute("class", "subOption");
     inputElement.setAttribute("value", name);
-    inputElement.setAttribute("name", "car_brands");
     inputElement.onclick = addNewSelect;
 
     const labelElement = document.createElement("label");
@@ -246,6 +254,9 @@ requestCars("GET", URL_REGION_TOWNS).then((data) => {
   let arrAllSelectedRegions = new Array();
 
   const addNewSelect = (event) => {
+    let selectBox = document.getElementsByClassName("selectBox_Towns");
+    selectBox[0].classList.remove("avoid-click");
+
     let labelModel = event.target.parentElement;
     labelModel.classList.toggle("activate");
 
@@ -307,6 +318,12 @@ requestCars("GET", URL_REGION_TOWNS).then((data) => {
             allSelected.append(arrAllSelectedRegions.join(", "));
             if (arrAllSelectedRegions.length === 0) {
               allSelected.innerText = "Выберите регион...";
+
+              let selectBox =
+                document.getElementsByClassName("selectBox_Towns");
+              let checkboxModels = document.querySelector("#checkboxes_4");
+              selectBox[0].classList.add("avoid-click");
+              checkboxModels.style.display = "none";
             }
           }
         }

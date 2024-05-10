@@ -79,11 +79,14 @@
 
           <div class="tagForInput tagForInput_3"><p>Модель</p></div>
           <div class="multiselect">
-            <div class="selectBox" onclick="showModels()">
+            <div
+              class="selectBox selectBox_Models avoid-click"
+              onclick="showModels()"
+            >
               <select name="models" id="models">
                 <option id="allSelected_2">Выберите модель...</option>
               </select>
-              <div class="overSelect" disabled></div>
+              <div class="overSelect"></div>
             </div>
             <div id="checkboxes_2" class="checkboxes__">
               <input
@@ -116,7 +119,10 @@
 
           <div class="tagForInput tagForInput_5"><p>Города</p></div>
           <div class="multiselect multiselect_4">
-            <div class="selectBox" onclick="showTowns()">
+            <div
+              class="selectBox selectBox_Towns avoid-click"
+              onclick="showTowns()"
+            >
               <select name="towns" id="towns">
                 <option id="allSelected_4">Выберите город...</option>
               </select>

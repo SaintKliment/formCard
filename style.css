@@ -8,6 +8,10 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.avoid-click {
+  pointer-events: none; /* Попробуйте кликнуть сейчас! */
+}
+
 .mainBlock {
   max-width: 1240px;
   max-height: 892px;
@@ -191,13 +195,13 @@ input::-webkit-inner-spin-button {
   display: block;
   font-size: calc(10px + 10 * ((100vw - 350px) / (1920 - 350)));
   border-top: calc(0.1px + 0.9 * ((100vw - 350px) / (1920 - 350))) solid gray;
-  height: calc(25px + 15 * ((100vw - 350px) / (1920 - 350)));
+  height: calc(25px + 10 * ((100vw - 350px) / (1920 - 350)));
 }
 .labelOption_2 {
   display: block;
   font-size: calc(10px + 10 * ((100vw - 350px) / (1920 - 350)));
   border-top: calc(0.1px + 0.9 * ((100vw - 350px) / (1920 - 350))) solid gray;
-  height: calc(25px + 15 * ((100vw - 350px) / (1920 - 350)));
+  height: calc(25px + 10 * ((100vw - 350px) / (1920 - 350)));
 }
 
 .subOption {
