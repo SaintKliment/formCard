@@ -312,6 +312,39 @@ input::-webkit-inner-spin-button {
   background-color: #77adff7c;
 }
 
+.enter {
+  width: 176px;
+  height: 47px;
+  top: 495px;
+  left: 779px;
+  background: rgba(7, 169, 33, 1);
+  border-radius: 11px;
+  display: flex;
+  border: 0px;
+}
+.enterText {
+  width: 101px;
+  height: 40px;
+  margin: 0px;
+  line-height: 45px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+}
+.clear {
+  width: 176px;
+  height: 47px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(200, 200, 200, 1);
+}
+.clearText {
+  width: 132px;
+  height: 19px;
+  top: 14px;
+  left: 22px;
+  font-size: 15px;
+  color: rgba(146, 146, 146, 1);
+}
 @media (max-width: 500px) and (max-height: 932px) {
   .mainBlock {
     max-width: 1240px;
