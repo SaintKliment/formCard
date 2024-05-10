@@ -221,7 +221,7 @@ function filterFunctionForModels() {
 
 const URL_REGION_TOWNS = "./data/RegionCites.json";
 
-const requestCars = (method, URL_REGION_TOWNS, body = null) => {
+const requestTowns = (method, URL_REGION_TOWNS, body = null) => {
   return fetch(URL_REGION_TOWNS, {
     method: method,
     body: body,
@@ -229,7 +229,7 @@ const requestCars = (method, URL_REGION_TOWNS, body = null) => {
     return request.json();
   });
 };
-requestCars("GET", URL_REGION_TOWNS).then((data) => {
+requestTowns("GET", URL_REGION_TOWNS).then((data) => {
   var arrAllSelectedTowns = new Array();
   const toggleTextInSelect = (event) => {
     var activateInput = event.target.parentElement.querySelector("input");
@@ -408,3 +408,33 @@ const clearFunc = (event) => {
     }
   }
 };
+
+let form = document.querySelector("form");
+
+const validateFunc = (event) => {
+  event.preventDefault();
+
+  let car_brands_fields = document.getElementById("allSelected");
+  if (car_brands_fields.value === "Выберите марку...") {
+    alert("Пожалуйста, заполните все поля");
+    return;
+  }
+  let models_fields = document.getElementById("allSelected_2");
+  if (models_fields.value === "Выберите модель...") {
+    alert("Пожалуйста, заполните все поля");
+    return;
+  }
+  let regions_fields = document.getElementById("allSelected_3");
+  if (regions_fields.value === "Выберите регион...") {
+    alert("Пожалуйста, заполните все поля");
+    return;
+  }
+  let towns_fields = document.getElementById("allSelected_4");
+  if (towns_fields.value === "Выберите город...") {
+    alert("Пожалуйста, заполните все поля");
+    return;
+  }
+  form.submit();
+};
+
+form.addEventListener("submit", validateFunc);
