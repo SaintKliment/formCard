@@ -1,0 +1,590 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mainBlock {
+  max-width: 1240px;
+  max-height: 892px;
+  width: 100%;
+  height: 100vh;
+  background-image: url("./background_copy.webp");
+  background-position: center;
+  margin: 0 auto;
+}
+.theBestform {
+  max-width: 100%;
+  max-height: 280px;
+  position: absolute;
+  top: calc(30px + 236 * ((100vw - 350px) / (1920 - 350)));
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: rgba(139, 139, 139, 0.9);
+
+  width: calc(300px + 378 * ((100vw - 350px) / (1920 - 350)));
+  height: calc(125px + 155 * ((100vw - 350px) / (1920 - 350)));
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: row;
+}
+@media (min-width: 1920px) {
+  .theBestform {
+    max-width: 678px;
+  }
+}
+.row {
+  max-width: 678px;
+  max-height: calc(30px + 50 * ((100vw - 350px) / (1920 - 350)));
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.inputBlock {
+  width: calc(160px + 145 * ((100vw - 350px) / (1920 - 350)));
+  height: 100%;
+  display: flex;
+  padding-left: 0.1%;
+}
+.inputElem {
+  width: 100%;
+  height: calc(18px + 17 * ((100vw - 350px) / (1920 - 350)));
+  border: 0.5px solid #bebebe;
+  border-radius: 7px 0 0 7px;
+  font-size: 0.9vw;
+  font-size: calc(10px + 10 * ((100vw - 350px) / (1920 - 350)));
+  z-index: 1;
+}
+.inputElem:last-child {
+  border-radius: 0 7px 7px 0;
+}
+.inputElem:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+.tagForInput {
+  max-width: 60px;
+  max-height: 2px;
+  line-height: 0.5vw;
+
+  position: absolute;
+  z-index: 10;
+
+  width: 10%;
+  height: 10%;
+  background-color: #fff;
+  border-radius: 3vh;
+  color: #898989;
+}
+.tagForInput p {
+  margin: 0 auto;
+}
+
+.tagForInput_1 {
+  top: -2%;
+  left: 0;
+  margin-left: calc(10px + 10 * ((100vw - 350px) / (1920 - 350)));
+  padding: calc(2px + 3 * ((100vw - 350px) / (1920 - 350)));
+}
+@media (min-width: 1920px) {
+  .tagForInput_1 {
+    left: 2%;
+    margin-left: 0;
+  }
+}
+.tagForInput_1 p {
+  width: 60%;
+  font-size: calc(5px + 12 * ((100vw - 350px) / (1920 - 350)));
+  margin-left: calc(7.5px + 2.5 * ((100vw - 350px) / (1920 - 350)));
+}
+
+.inputElem_2 {
+  width: 100%;
+  height: calc(18px + 17 * ((100vw - 350px) / (1920 - 350)));
+  border: 0.5px solid #bebebe;
+  border-radius: 7px 0 0 7px;
+  font-size: calc(10px + 10 * ((100vw - 350px) / (1920 - 350)));
+  z-index: 1;
+}
+
+.inputElem_2:last-child {
+  border-radius: 0 7px 7px 0;
+}
+.inputElem_2:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.tagForInput_2 {
+  top: -2%;
+  left: 0;
+  margin-left: calc(156px + 230 * ((100vw - 350px) / (1920 - 350)));
+  padding: calc(2px + 3 * ((100vw - 350px) / (1920 - 350)));
+}
+.tagForInput_2 p {
+  width: 50%;
+  margin-left: calc(9px + 10 * ((100vw - 350px) / (1920 - 350)));
+  font-size: calc(5px + 12 * ((100vw - 350px) / (1920 - 350)));
+}
+@media (min-width: 1920px) {
+  .tagForInput_2 {
+    left: 55%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 2220px) {
+  .tagForInput_2 {
+    left: 53%;
+    margin-left: 0;
+  }
+}
+.subOption {
+  width: calc(15px + 10 * ((100vw - 350px) / (1920 - 350)));
+}
+
+.multiselect {
+  width: calc(160px + 145 * ((100vw - 350px) / (1920 - 350)));
+  height: 100%;
+  z-index: 100;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+  height: calc(20px + 20 * ((100vw - 350px) / (1920 - 350)));
+  font-weight: bold;
+  border-radius: 7px;
+  border: 0.5px solid #bebebe;
+  font-size: calc(8px + 10 * ((100vw - 350px) / (1920 - 350)));
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.checkboxes__ {
+  display: none;
+  background-color: #fff;
+  border: 1px #dadada solid;
+  overflow-y: scroll;
+  height: 200px;
+  width: calc(147px + 156 * ((100vw - 350px) / (1920 - 350)));
+}
+.subOption_label {
+  display: block;
+  font-size: calc(10px + 10 * ((100vw - 350px) / (1920 - 350)));
+  border-top: calc(0.1px + 0.9 * ((100vw - 350px) / (1920 - 350))) solid gray;
+  height: calc(25px + 15 * ((100vw - 350px) / (1920 - 350)));
+}
+.labelOption_2 {
+  display: block;
+  font-size: calc(10px + 10 * ((100vw - 350px) / (1920 - 350)));
+  border-top: calc(0.1px + 0.9 * ((100vw - 350px) / (1920 - 350))) solid gray;
+  height: calc(25px + 15 * ((100vw - 350px) / (1920 - 350)));
+}
+
+.subOption {
+  width: calc(15px + 10 * ((100vw - 350px) / (1920 - 350)));
+}
+
+.tagForInput_3 {
+  top: calc(30px + 44 * ((100vw - 350px) / (1920 - 350)));
+  left: 0;
+
+  margin-left: calc(156px + 230 * ((100vw - 350px) / (1920 - 350)));
+  padding: calc(2px + 3 * ((100vw - 350px) / (1920 - 350)));
+  z-index: 101;
+}
+.tagForInput_3 p {
+  width: 50%;
+  margin-left: calc(5px - 1 * ((100vw - 350px) / (1920 - 350)));
+  line-height: 2.5px;
+  font-size: calc(5px + 9 * ((100vw - 350px) / (1920 - 350)));
+}
+@media (min-width: 1920px) {
+  .tagForInput_3 {
+    left: 55%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 2220px) {
+  .tagForInput_3 {
+    left: 53%;
+    margin-left: 0;
+  }
+}
+.tagForInput_4 {
+  top: calc(30px + 44 * ((100vw - 350px) / (1920 - 350)));
+  left: 0;
+
+  margin-left: calc(10px + 10 * ((100vw - 350px) / (1920 - 350)));
+  padding: calc(2px + 3 * ((100vw - 350px) / (1920 - 350)));
+  z-index: 101;
+}
+.tagForInput_4 p {
+  width: 60%;
+  margin: 0 auto;
+  margin-left: calc(7px - 1 * ((100vw - 350px) / (1920 - 350)));
+  line-height: 2px;
+  font-size: calc(5px + 9 * ((100vw - 350px) / (1920 - 350)));
+}
+.multiselect_3 {
+  z-index: 98;
+}
+
+.multiselect_4 {
+  z-index: 98;
+}
+
+.search {
+  width: calc(235px - 12 * ((100vw - 350px) / (1920 - 350)));
+  height: 10%;
+  border: 0px;
+  font-size: calc(9px + 10 * ((100vw - 350px) / (1920 - 350)));
+}
+.search:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.tagForInput_5 {
+  top: calc(58px + 96 * ((100vw - 350px) / (1920 - 350)));
+  left: 0;
+
+  margin-left: calc(156px + 230 * ((100vw - 350px) / (1920 - 350)));
+  padding: calc(2px + 3 * ((100vw - 350px) / (1920 - 350)));
+  z-index: 99;
+}
+.tagForInput_5 p {
+  width: 50%;
+  margin-left: calc(7px + 2 * ((100vw - 350px) / (1920 - 350)));
+  line-height: 2.5px;
+  font-size: calc(5px + 8 * ((100vw - 350px) / (1920 - 350)));
+}
+@media (min-width: 1920px) {
+  .tagForInput_5 {
+    left: 55%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 2220px) {
+  .tagForInput_5 {
+    left: 53%;
+    margin-left: 0;
+  }
+}
+.tagForInput_6 {
+  top: calc(58px + 96 * ((100vw - 350px) / (1920 - 350)));
+  left: 0;
+
+  margin-left: calc(10px + 10 * ((100vw - 350px) / (1920 - 350)));
+  padding: calc(2px + 3 * ((100vw - 350px) / (1920 - 350)));
+  z-index: 99;
+}
+.tagForInput_6 p {
+  width: 60%;
+  margin-left: calc(4.5px + 1 * ((100vw - 350px) / (1920 - 350)));
+  line-height: 2px;
+  font-size: calc(5px + 8 * ((100vw - 350px) / (1920 - 350)));
+  margin-top: 0px;
+}
+.activate {
+  color: #2f20ff;
+  background-color: #77adff7c;
+}
+
+@media (max-width: 500px) and (max-height: 932px) {
+  .mainBlock {
+    max-width: 1240px;
+    max-height: 892px;
+    width: 100%;
+    height: 100vh;
+    background-image: url("./background_copy.webp");
+  }
+  .theBestform {
+    max-height: 500px;
+    height: calc(350px + 450 * ((100vw - 350px) / (1920 - 350)));
+    top: calc(138px + 1250 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .row:last-child {
+    max-width: calc(275px + 200 * ((100vw - 350px) / (1920 - 350)));
+    display: flex;
+    justify-content: space-between;
+  }
+  .tagForInput {
+    max-width: 60px;
+    max-height: 30px;
+    position: absolute;
+    z-index: 10;
+    width: 60px;
+    height: 8px;
+  }
+  .row {
+    display: inline;
+    height: 10px;
+  }
+  .inputBlock {
+    margin: 0 auto;
+    width: calc(250px + 100 * ((100vw - 350px) / (1920 - 350)));
+    height: calc(54px + 80 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .inputElem_2 {
+    height: calc(30px + 25 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .inputElem {
+    height: calc(30px + 25 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .selectBox select {
+    height: calc(30px + 23 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .tagForInput_1 {
+    margin-left: calc(30px + 155 * ((100vw - 350px) / (1920 - 350)));
+    top: -2%;
+  }
+  .tagForInput_1 p {
+    font-size: calc(10px + 12 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(15px + 2.5 * ((100vw - 350px) / (1920 - 350)));
+    margin-top: 4.5px;
+  }
+  .multiselect {
+    width: calc(250px + 140 * ((100vw - 350px) / (1920 - 350)));
+    height: calc(50px + 80 * ((100vw - 350px) / (1920 - 350)));
+    z-index: 100;
+    margin: 0 auto;
+  }
+  .selectBox select {
+    width: 100%;
+    height: calc(30px + 20 * ((100vw - 350px) / (1920 - 350)));
+    font-size: calc(15px + 10 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .tagForInput_2 {
+    top: calc(47px + 72 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(30px + 160 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .tagForInput_2 p {
+    font-size: calc(10px + 12 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(19px + 2.5 * ((100vw - 350px) / (1920 - 350)));
+    margin-top: 4.5px;
+  }
+  .checkboxes__ {
+    height: calc(175px + 130 * ((100vw - 350px) / (1920 - 350)));
+    width: calc(250px + 130 * ((100vw - 350px) / (1920 - 350)));
+    position: absolute;
+  }
+  #checkboxes {
+    z-index: 112;
+  }
+  #checkboxes_2 {
+    z-index: 111;
+  }
+  #checkboxes_3 {
+    z-index: 110;
+  }
+  #checkboxes_4 {
+    z-index: 109;
+  }
+  .tagForInput_4 {
+    top: calc(101px + 140 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(30px + 155 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .tagForInput_4 p {
+    font-size: calc(10px + 12 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(13px + -20.5 * ((100vw - 350px) / (1920 - 350)));
+    margin-top: 2.5px;
+  }
+  .tagForInput_3 {
+    top: calc(152px + 220 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(30px + 142 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .tagForInput_3 p {
+    font-size: calc(10px + 12 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(11.5px + -33.5 * ((100vw - 350px) / (1920 - 350)));
+    margin-top: 2.5px;
+  }
+  .tagForInput_6 {
+    top: calc(201px + 300 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(30px + 140 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .tagForInput_6 p {
+    margin-left: calc(11px + -45 * ((100vw - 350px) / (1920 - 350)));
+    font-size: calc(10px + 8 * ((100vw - 350px) / (1920 - 350)));
+    margin-top: calc(3px + 14 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .tagForInput_5 {
+    top: calc(251px + 379 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(30px + 145 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .tagForInput_5 p {
+    margin-left: calc(11px - 1 * ((100vw - 350px) / (1920 - 350)));
+    font-size: calc(10px + 8 * ((100vw - 350px) / (1920 - 350)));
+    margin-top: calc(3px + 10.7 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .clear {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 25px;
+    padding: 0px;
+    text-align: center;
+  }
+  .clearText {
+    margin: 0;
+  }
+}
+
+@media (max-width: 1280px) and (max-height: 1440px) and (min-height: 792px) {
+  .mainBlock {
+    max-width: 1240px;
+    max-height: 892px;
+    width: 100%;
+    height: 100vh;
+    background-image: url("./background_copy.webp");
+  }
+  .theBestform {
+    max-height: 600px;
+    height: calc(350px + 600 * ((100vw - 350px) / (1920 - 350)));
+    top: calc(120px + 27 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .tagForInput {
+    max-width: 60px;
+    max-height: 30px;
+    position: absolute;
+    z-index: 10;
+    width: 60px;
+    height: 8px;
+  }
+  .row {
+    display: inline;
+    height: 10px;
+  }
+  .row:last-child {
+    display: flex;
+    justify-content: space-between;
+  }
+  .inputBlock {
+    margin: 0 auto;
+    width: calc(250px + 100 * ((100vw - 350px) / (1920 - 350)));
+    height: calc(54px + 80 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .inputElem_2 {
+    height: calc(30px + 25 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .inputElem {
+    height: calc(30px + 25 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .selectBox select {
+    height: calc(30px + 23 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .tagForInput_1 {
+    margin-left: calc(30px + 155 * ((100vw - 350px) / (1920 - 350)));
+    top: -2%;
+  }
+  .tagForInput_1 p {
+    font-size: calc(10px + 12 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(15px + -12.5 * ((100vw - 350px) / (1920 - 350)));
+    margin-top: 4.5px;
+  }
+  .multiselect {
+    width: calc(250px + 140 * ((100vw - 350px) / (1920 - 350)));
+    height: calc(50px + 80 * ((100vw - 350px) / (1920 - 350)));
+    z-index: 100;
+    margin: 0 auto;
+  }
+  .selectBox select {
+    width: 100%;
+    height: calc(30px + 20 * ((100vw - 350px) / (1920 - 350)));
+    font-size: calc(15px + 10 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .tagForInput_2 {
+    top: calc(47px + 72 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(30px + 160 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .tagForInput_2 p {
+    font-size: calc(10px + 12 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(19px + -5 * ((100vw - 350px) / (1920 - 350)));
+    margin-top: 4.5px;
+  }
+  .checkboxes__ {
+    height: calc(175px + 130 * ((100vw - 350px) / (1920 - 350)));
+    width: calc(250px + 130 * ((100vw - 350px) / (1920 - 350)));
+    position: absolute;
+  }
+  #checkboxes {
+    z-index: 112;
+  }
+  #checkboxes_2 {
+    z-index: 111;
+  }
+  #checkboxes_3 {
+    z-index: 110;
+  }
+  #checkboxes_4 {
+    z-index: 109;
+  }
+  .tagForInput_4 {
+    top: calc(101px + 158 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(30px + 135 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .tagForInput_4 p {
+    font-size: calc(10px + 9 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(13px + -12.5 * ((100vw - 350px) / (1920 - 350)));
+    margin-top: 2.5px;
+  }
+  .tagForInput_3 {
+    top: calc(152px + 233 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(30px + 135 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .tagForInput_3 p {
+    font-size: calc(10px + 9 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(11.5px + -19 * ((100vw - 350px) / (1920 - 350)));
+    margin-top: 2.5px;
+  }
+  .tagForInput_6 {
+    top: calc(201px + 317 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(30px + 140 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .tagForInput_6 p {
+    margin-left: calc(11px + -21 * ((100vw - 350px) / (1920 - 350)));
+    font-size: calc(10px + 8 * ((100vw - 350px) / (1920 - 350)));
+    margin-top: calc(3px + 5 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .tagForInput_5 {
+    top: calc(251px + 400 * ((100vw - 350px) / (1920 - 350)));
+    margin-left: calc(30px + 140 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .tagForInput_5 p {
+    margin-left: calc(11px + -10 * ((100vw - 350px) / (1920 - 350)));
+    font-size: calc(10px + 8 * ((100vw - 350px) / (1920 - 350)));
+    margin-top: calc(3px + 3.7 * ((100vw - 350px) / (1920 - 350)));
+  }
+  .clear {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 25px;
+    padding: 0px;
+    text-align: center;
+  }
+  .clearText {
+    margin: 0;
+  }
+}

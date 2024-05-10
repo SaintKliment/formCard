@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>купи машину :]</title>
+  </head>
+  <body>
+    <div class="mainBlock">
+      <form
+        class="theBestform"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="51372021-b316-4079-ad7d-aced7b230338"
+        />
+        <div class="row">
+          <div class="inputBlock">
+            <div class="tagForInput tagForInput_1"><p>Цена</p></div>
+            <input
+              name="minPrice"
+              placeholder="От"
+              type="number"
+              class="inputElem"
+              id="inputElem__1"
+            />
+            <input
+              name="maxPrice"
+              placeholder="До"
+              type="number"
+              class="inputElem"
+            />
+          </div>
+          <div class="inputBlock">
+            <div class="tagForInput tagForInput_2"><p>Год</p></div>
+            <input
+              name="minYear"
+              placeholder="От"
+              type="number"
+              class="inputElem_2"
+            />
+            <input
+              name="maxYear"
+              placeholder="До"
+              type="number"
+              class="inputElem_2"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="tagForInput tagForInput_4"><p>Марка</p></div>
+          <div class="multiselect">
+            <div class="selectBox" onclick="showMarks()">
+              <select name="car_brands" id="car_brands">
+                <option id="allSelected">Выберите марку...</option>
+              </select>
+              <div class="overSelect"></div>
+            </div>
+            <div id="checkboxes" class="checkboxes__">
+              <input
+                id="search"
+                class="search"
+                placeholder="Поиск..."
+                onkeyup="filterFunctionForMarks()"
+              />
+            </div>
+          </div>
+
+          <div class="tagForInput tagForInput_3"><p>Модель</p></div>
+          <div class="multiselect">
+            <div class="selectBox" onclick="showModels()">
+              <select name="models" id="models">
+                <option id="allSelected_2">Выберите модель...</option>
+              </select>
+              <div class="overSelect" disabled></div>
+            </div>
+            <div id="checkboxes_2" class="checkboxes__">
+              <input
+                id="search_2"
+                class="search"
+                placeholder="Поиск..."
+                onkeyup="filterFunctionForModels()"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="tagForInput tagForInput_6"><p>Регионы</p></div>
+          <div class="multiselect multiselect_3">
+            <div class="selectBox" onclick="showRegions()">
+              <select name="regions" id="regions">
+                <option id="allSelected_3">Выберите регион...</option>
+              </select>
+              <div class="overSelect"></div>
+            </div>
+            <div id="checkboxes_3" class="checkboxes__">
+              <input
+                id="search_3"
+                class="search"
+                placeholder="Поиск..."
+                onkeyup="filterFunctionForRegions()"
+              />
+            </div>
+          </div>
+
+          <div class="tagForInput tagForInput_5"><p>Города</p></div>
+          <div class="multiselect multiselect_4">
+            <div class="selectBox" onclick="showTowns()">
+              <select name="towns" id="towns">
+                <option id="allSelected_4">Выберите город...</option>
+              </select>
+              <div class="overSelect"></div>
+            </div>
+            <div id="checkboxes_4" class="checkboxes__">
+              <input
+                placeholder="Поиск..."
+                id="search_4"
+                class="search"
+                onkeyup="filterFunctionForTowns()"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="buttonClear">
+            <button type="button" class="clear" onclick="clearFunc()">
+              <p class="clearText">Очистить фильтры</p>
+            </button>
+          </div>
+          <div class="buttonEnter">
+            <button type="submit" class="enter">
+              <p class="enterText">применить</p>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>
