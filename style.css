@@ -325,6 +325,10 @@ input::-webkit-inner-spin-button {
   border-radius: 11px;
   display: flex;
   border: 0px;
+  cursor: pointer;
+}
+.enter:active {
+  background-color: rgba(19, 97, 32, 0.85);
 }
 .enterText {
   width: 101px;
@@ -334,12 +338,16 @@ input::-webkit-inner-spin-button {
   font-size: 16px;
   color: rgba(255, 255, 255, 1);
 }
+.clear:active {
+  background-color: rgb(216, 216, 216);
+}
 .clear {
   width: 176px;
   height: 47px;
   border-radius: 9px;
   background: rgba(255, 255, 255, 1);
   border: 1px solid rgba(200, 200, 200, 1);
+  cursor: pointer;
 }
 .clearText {
   width: 132px;
