@@ -30,7 +30,6 @@ input::-webkit-inner-spin-button {
   bottom: 0;
   right: 0;
   margin: 0 auto;
-  background-color: rgba(139, 139, 139, 0.9);
 
   width: calc(300px + 378 * ((100vw - 350px) / (1920 - 350)));
   height: calc(125px + 155 * ((100vw - 350px) / (1920 - 350)));
