@@ -173,7 +173,6 @@ request("GET", URL_REGION_CARS).then((data) => {
     inputElement.setAttribute("id", ID);
     inputElement.setAttribute("class", "subOption");
     inputElement.setAttribute("value", name);
-    inputElement.setAttribute("name", "car_brands");
     inputElement.onclick = addNewSelect;
 
     const labelElement = document.createElement("label");
